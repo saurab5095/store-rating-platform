@@ -1,7 +1,7 @@
 # Store Rating System - Full Stack Web Application
-### Live Demo: https://www.youtube.com/watch?v=fecxs_GVXm4
 
-A comprehensive store rating and management system built with React (TypeScript) frontend and Node.js/Express backend with PostgreSQL database.
+
+
 
 ## 📸 Application Screenshots
 
@@ -360,43 +360,4 @@ npm run build           # Build for production
 npm test                # Run tests
 ```
 
-## 📝 Future Enhancements
 
-- **Image Upload**: Store logos and user avatars
-- **Email Notifications**: Email confirmations and notifications
-- **Advanced Analytics**: Detailed reporting and analytics
-- **Mobile App**: React Native mobile application
-- **Real-time Updates**: WebSocket integration
-- **Payment Integration**: Premium store features
-- **Social Features**: User following and social ratings
-- **API Documentation**: Swagger/OpenAPI documentation
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 👥 Support
-
-For support and questions:
-- Create an issue in the repository
-- Check the troubleshooting section
-- Review the API documentation
-
----
-
-**Note**: This is a development setup. For production deployment, ensure to:
-- Use strong JWT secrets
-- Configure proper CORS origins
-- Set up SSL/HTTPS
-- Use environment-specific configurations
-- Implement proper logging and monitoring
-- Set up database backups
-- Configure proper rate limiting for production load
