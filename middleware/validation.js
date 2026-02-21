@@ -15,8 +15,8 @@ const handleValidationErrors = (req, res, next) => {
 // User registration validation
 const validateUserRegistration = [
   body('name')
-    .isLength({ min: 3, max: 60 })
-    .withMessage('Name must be between 3 and 60 characters')
+    .isLength({ min: 20, max: 60 })
+    .withMessage('Name must be between 20 and 60 characters')
     .trim()
     .escape(),
   
@@ -128,8 +128,8 @@ const validatePasswordUpdate = [
 const validateUserUpdate = [
   body('name')
     .optional()
-    .isLength({ min: 3, max: 60 })
-    .withMessage('Name must be between 3 and 60 characters')
+    .isLength({ min: 20, max: 60 })
+    .withMessage('Name must be between 20 and 60 characters')
     .trim()
     .escape(),
   
@@ -149,8 +149,8 @@ const validateUserUpdate = [
   
   body('role')
     .optional()
-    .isIn(['system_admin', 'normal_user', 'store_owner'])
-    .withMessage('Role must be one of: system_admin, normal_user, store_owner'),
+    .isIn(['SYSTEM_ADMIN', 'NORMAL_USER', 'STORE_OWNER'])
+    .withMessage('Role must be one of: SYSTEM_ADMIN, NORMAL_USER, STORE_OWNER'),
   
   handleValidationErrors
 ];

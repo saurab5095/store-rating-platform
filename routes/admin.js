@@ -18,9 +18,9 @@ router.get('/dashboard', authenticateToken, requireAdmin, async (req, res) => {
     const stats = await pool.query(`
       SELECT 
         (SELECT COUNT(*) FROM users) as total_users,
-        (SELECT COUNT(*) FROM users WHERE role = 'NORMAL_USER') as normal_users,
-        (SELECT COUNT(*) FROM users WHERE role = 'STORE_OWNER') as store_owners,
-        (SELECT COUNT(*) FROM users WHERE role = 'SYSTEM_ADMIN') as admin_users,
+        (SELECT COUNT(*) FROM users WHERE role ILIKE 'normal_user') as normal_users,
+        (SELECT COUNT(*) FROM users WHERE role ILIKE 'store_owner') as store_owners,
+        (SELECT COUNT(*) FROM users WHERE role ILIKE 'system_admin') as admin_users,
         (SELECT COUNT(*) FROM stores) as total_stores,
         (SELECT COUNT(*) FROM ratings) as total_ratings,
         (SELECT COALESCE(AVG(rating), 0) FROM ratings) as average_rating,

@@ -44,7 +44,7 @@ const authorizeRoles = (...roles) => {
       return res.status(401).json({ message: 'Authentication required' });
     }
 
-    if (!roles.includes(req.user.role)) {
+    if (!roles.map(r => r.toLowerCase()).includes(req.user.role.toLowerCase())) {
       return res.status(403).json({ 
         message: 'Access denied. Insufficient permissions.' 
       });
